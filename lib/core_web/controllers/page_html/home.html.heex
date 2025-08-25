@@ -57,11 +57,37 @@
     </div>
 
     <p class="text-[2rem] mt-4 font-semibold leading-10 tracking-tighter text-balance">
-      Peace of mind from prototype to production.
+      LiveReact + React Flow Demo
     </p>
     <p class="mt-4 leading-7 text-base-content/70">
-      Build rich, interactive web applications quickly, with less code and fewer moving parts. Join our growing community of developers using Phoenix to craft APIs, HTML5 apps and more, for fun or at scale.
+      Демонстрация интеграции LiveReact с React Flow в Phoenix приложении.
     </p>
+
+    <div class="mt-8 space-y-6">
+      <div class="bg-base-200 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Simple React Component</h2>
+        <.react name="Simple" />
+      </div>
+
+      <div class="bg-base-200 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Link Example</h2>
+        <.react name="LinkExample" />
+      </div>
+
+      <div class="bg-base-200 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">React Flow Demo</h2>
+        <p class="text-sm text-base-content/70 mb-4">
+          Интерактивная диаграмма с узлами и связями
+        </p>
+        <.react name="Flow" />
+      </div>
+
+      <div class="mt-6">
+        <a href="/flow" class="btn btn-primary">
+          Открыть полную страницу React Flow
+        </a>
+      </div>
+    </div>
     <div class="flex">
       <div class="w-full sm:w-auto">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-3">

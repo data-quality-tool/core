@@ -25,8 +25,7 @@ config :core, CoreWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "l5jkiu1y4DCXlaTLtsrsvu1bB6ZX8GDujs265fVAWOwDa+vcl4yTyIgTKbkEDghF",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:core, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:core, ~w(--watch)]}
+    npm: ["run", "dev", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
@@ -86,3 +85,8 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+# LiveReact configuration
+config :live_react,
+  vite_host: "http://localhost:5173",
+  ssr: false

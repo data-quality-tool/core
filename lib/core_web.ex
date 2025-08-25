@@ -87,6 +87,9 @@ defmodule CoreWeb do
       # Core UI components
       import CoreWeb.CoreComponents
 
+      # LiveReact
+      import LiveReact
+
       # Common modules used in templates
       alias Phoenix.LiveView.JS
       alias CoreWeb.Layouts

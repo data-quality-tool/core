@@ -1,0 +1,22 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "Core Phoenix application",
+  "scripts": {
+    "build": "esbuild assets/js/app.js --bundle --target=es2022 --outdir=../priv/static/assets/js --external:/fonts/* --external:/images/* --alias:@=.",
+    "watch": "esbuild assets/js/app.js --bundle --target=es2022 --outdir=../priv/static/assets/js --external:/fonts/* --external:/images/* --alias:@=. --watch"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactflow": "^11.10.1",
+    "@reactflow/core": "^11.10.1",
+    "@reactflow/controls": "^11.2.6",
+    "@reactflow/background": "^11.3.3",
+    "@reactflow/minimap": "^11.18.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  }
+}
