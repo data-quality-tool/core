@@ -4,6 +4,8 @@ defmodule Core.Blueprinting.Datasource do
 
   schema "datasources" do
     field :name, :string
+    field :multitenant, :boolean, default: false
+    field :tenants, {:array, :string}, default: []
 
     timestamps(type: :utc_datetime)
   end
@@ -11,7 +13,7 @@ defmodule Core.Blueprinting.Datasource do
   @doc false
   def changeset(datasource, attrs) do
     datasource
-    |> cast(attrs, [:name])
+    |> cast(attrs, [:name, :multitenant, :tenants])
     |> validate_required([:name])
   end
 end
